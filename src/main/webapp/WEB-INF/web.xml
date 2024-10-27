@@ -11,11 +11,29 @@
   </welcome-file-list>
   <servlet>
     <servlet-name>Faces Servlet</servlet-name>
-    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <servlet-class>jakarta.faces.webapp.FacesServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>/faces/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Mapeando a servlet da aplicação -->
+  <servlet>
+		<description></description>
+		<servlet-name>ContatoServlet</servlet-name>
+		<servlet-class>br.com.projeto.controller.ContatoServlet</servlet-class>
+	</servlet>
+	
+  <servlet-mapping>
+  	<servlet-name>ContatoServlet</servlet-name>
+  	<url-pattern>/viewagenda</url-pattern>
+  	<url-pattern>/viewnovo</url-pattern>
+  	<url-pattern>/inserir</url-pattern>
+  	<url-pattern>/vieweditar</url-pattern>
+  	<url-pattern>/atualizar</url-pattern>
+  	<url-pattern>/excluir</url-pattern>
+  	<url-pattern>/impressao</url-pattern>
   </servlet-mapping>
 </web-app>
